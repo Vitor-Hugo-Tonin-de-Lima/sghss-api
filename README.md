@@ -54,6 +54,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 Bash:   
 
 git clone https://github.com/Vitor-Hugo-Tonin-de-Lima/sghss-api.git
+
 cd sghss-api
 ### 2. Configurar o Banco de Dados
 Abra seu cliente MySQL (como o MySQL Workbench).
@@ -85,6 +86,7 @@ Bash:
 mvn spring-boot:run
 
 A API estará disponível em http://localhost:8080. 
+
 Um usuário admin@sghss.com com senha admin123 será criado na primeira inicialização.
 
 ## ✔️ Endpoints da API
