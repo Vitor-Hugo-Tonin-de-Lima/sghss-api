@@ -42,16 +42,16 @@ Siga os passos abaixo para executar a aplicação localmente.
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina:
 
-JDK 22 ou superior.
+* JDK 22 ou superior;
 
-Apache Maven 3.8 ou superior.
+* Apache Maven 3.8 ou superior;
 
-MySQL 8.0 ou superior.
+* MySQL 8.0 ou superior.
 
-Git.
-
+* Git.
+    
 ### 1. Clonar o Repositório
-Bash
+Bash:   
 
 git clone https://github.com/Vitor-Hugo-Tonin-de-Lima/sghss-api.git
 cd sghss-api
@@ -67,40 +67,41 @@ Navegue até o arquivo src/main/resources/application.properties.
 
 Altere as seguintes propriedades para corresponder à sua configuração do MySQL e defina uma chave secreta para o JWT:
 
-Properties
+* spring.datasource.url=jdbc:mysql://localhost:3306/sghss_db
 
-spring.datasource.url=jdbc:mysql://localhost:3306/sghss_db
+* spring.datasource.username=seu_usuario_mysql
 
-spring.datasource.username=seu_usuario_mysql
+* spring.datasource.password=sua_senha_mysql
 
-spring.datasource.password=sua_senha_mysql
-
-api.security.token.secret=SUA_CHAVE_SECRETA_EM_BASE64_AQUI
+* api.security.token.secret=SUA_CHAVE_SECRETA_EM_BASE64_AQUI
 
 ### 4. Executar a Aplicação
 Abra um terminal na raiz do projeto.
 
 Execute o seguinte comando Maven:
 
-Bash
+Bash:
 
 mvn spring-boot:run
-A API estará disponível em http://localhost:8080. Um usuário admin@sghss.com com senha admin123 será criado na primeira inicialização.
 
-Endpoints da API
+A API estará disponível em http://localhost:8080. 
+Um usuário admin@sghss.com com senha admin123 será criado na primeira inicialização.
+
+## ✔️ Endpoints da API
+
 A API é protegida por JWT. Para acessar os endpoints protegidos, primeiro obtenha um token através do endpoint de login.
 
-POST /auth/login - Autentica um usuário e retorna um token JWT.
+* POST /auth/login - Autentica um usuário e retorna um token JWT.
 
-POST /api/pacientes - Cadastra um novo paciente.
+* POST /api/pacientes - Cadastra um novo paciente.
 
-GET /api/pacientes - Lista todos os pacientes ativos (requer autenticação).
+* GET /api/pacientes - Lista todos os pacientes ativos (requer autenticação).
 
-POST /api/profissionais - Cadastra um novo profissional de saúde.
+* POST /api/profissionais - Cadastra um novo profissional de saúde.
 
-POST /api/consultas - Agenda uma nova consulta (requer autenticação).
+* POST /api/consultas - Agenda uma nova consulta (requer autenticação).
 
-DELETE /api/pacientes/{id} - Desativa um paciente (requer perfil de ADMIN).
+* DELETE /api/pacientes/{id} - Desativa um paciente (requer perfil de ADMIN).
 
 Para uma documentação mais detalhada de todos os endpoints e regras de negócio, consulte o documento PDF do projeto.
 
