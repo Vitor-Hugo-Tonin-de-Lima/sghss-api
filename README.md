@@ -68,13 +68,13 @@ Navegue até o arquivo src/main/resources/application.properties.
 
 Altere as seguintes propriedades para corresponder à sua configuração do MySQL e defina uma chave secreta para o JWT:
 
-* spring.datasource.url=jdbc:mysql://localhost:3306/sghss_db
+* spring.datasource.url=jdbc:mysql://localhost:3306/seu_schema_mysql
 
 * spring.datasource.username=seu_usuario_mysql
 
 * spring.datasource.password=sua_senha_mysql
 
-* api.security.token.secret=SUA_CHAVE_SECRETA_EM_BASE64_AQUI
+* api.security.token.secret=sua_chave_secreta_em_base64
 
 ### 4. Executar a Aplicação
 Abra um terminal na raiz do projeto.
